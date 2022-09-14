@@ -1,0 +1,23 @@
+#main {
+  width: 90vw;
+  height: 30vh;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  margin: 0 auto;
+  background-color: rgb(160, 221, 160);
+  border-radius: 2rem;
+}
+
+.head {
+  height: 50%;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+#text {
+  height: 80%;
+}
+#btn {
+  height: 85%;
+}

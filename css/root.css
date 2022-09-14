@@ -1,0 +1,31 @@
+*,
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+:root {
+  --black: #000;
+  --light-blue: #2998ff;
+  --dark-blue: #135cc5;
+  --light-red: #f87171;
+  --dark-red: #dc2626;
+  --gray: #252c30;
+
+  /*Intentions */
+  --primary: var(--light-blue);
+  --secondary: var(--dark-blue);
+
+  /*Typography */
+  --h1: 7.594rem;
+  --h2: 5.063rem;
+  --h3: 3.375rem;
+  --h4: 2.25rem;
+  --h5: 1.5rem;
+}
+
+h1 {
+  font-size: var(--h1);
+}
