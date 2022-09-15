@@ -1,6 +1,6 @@
 #main {
   width: 90vw;
-  height: 30vh;
+  min-height: 20vh;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
@@ -8,16 +8,43 @@
   background-color: rgb(160, 221, 160);
   border-radius: 2rem;
 }
-
+#list {
+  margin: 0 auto;
+  margin-top: 2rem;
+  border-radius: 2rem;
+  min-width: 20vw;
+  max-width: 80vw;
+  background-color: rgb(220, 229, 235);
+}
 .head {
   height: 50%;
+  width: 100%;
+  padding: 2%;
   display: flex;
   flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
 #text {
-  height: 80%;
+  height: 30%;
+  width: 50%;
+  min-width: 70%;
+  font-size: 2rem;
 }
 #btn {
-  height: 85%;
+  font-size: 2rem;
+  height: 35%;
+  min-width: 15%;
+  max-width: 15%;
+  border-radius: 2rem;
+}
+.errmsg {
+  color: red;
+  font-weight: 800;
+  font-size: 2rem;
+}
+
+.todoCont {
+  height: 80vh;
 }
