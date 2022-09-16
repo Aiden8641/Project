@@ -39,12 +39,37 @@
   max-width: 15%;
   border-radius: 2rem;
 }
+.error {
+  min-width: 0vw;
+  min-height: 0vh;
+  display: flex;
+  justify-content: center;
+}
 .errmsg {
   color: red;
-  font-weight: 800;
+  font-weight: 1000;
   font-size: 2rem;
+}
+.errmsghide {
+  font-size: 0;
 }
 
 .todoCont {
   height: 80vh;
+}
+
+.todoCont {
+  width: auto;
+  display: flex;
+  justify-content: flex-start;
+  flex-flow: column nowrap;
+}
+.dothis {
+  width: 80%;
+  font-size: 2rem;
+  background-color: rgb(91, 233, 186);
+  border-radius: 2rem;
+  padding: 2%;
+  margin-top: 0.5%;
+  margin: 0 auto;
 }

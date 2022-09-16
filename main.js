@@ -1,25 +1,32 @@
 const DOMSelectors = {
   button: document.getElementById("btn"),
   input: document.getElementById("text"),
-  errmsg: document.querySelector(`.error`),
+  errmsg: document.getElementById("erCont"),
+  list: document.querySelector(`.todoCont`),
 };
 let Todo = [];
 
+function Write() {
+  Todo.forEach((e) => {
+    DOMSelectors.list.insertAdjacentHTML(
+      "beforeend",
+      `<p class="dothis">${e}</p>`
+    );
+  });
+}
 function getinput() {
   DOMSelectors.button.addEventListener("click", function () {
     let display = DOMSelectors.input.value;
     if (display !== "") {
+      DOMSelectors.errmsg.className = "errmsghide";
       Todo.push(display);
-      console.log(display);
+
       DOMSelectors.input.value = null;
+
+      Write();
     }
     if (display === "") {
-      console.log(DOMSelectors.errmsg);
-      DOMSelectors.errmsg.insertAdjacentHTML(
-        "beforeend",
-        `<p class="errmsg">Write A Task to add to the To Do list</p>`
-      );
-      console.log("Write A Task to add to the To Do List");
+      DOMSelectors.errmsg.className = "errmsg";
     }
   });
 }
