@@ -14,6 +14,8 @@
   border-radius: 2rem;
   min-width: 20vw;
   max-width: 80vw;
+  height: 100%;
+  background-size: cover;
   background-color: rgb(220, 229, 235);
 }
 .head {
@@ -48,7 +50,7 @@
 .errmsg {
   color: red;
   font-weight: 1000;
-  font-size: 2rem;
+  font-size: 4rem;
 }
 .errmsghide {
   font-size: 0;
@@ -64,12 +66,40 @@
   justify-content: flex-start;
   flex-flow: column nowrap;
 }
-.dothis {
+
+.docont {
+  display: flex;
+  flex-flow: row nowrap;
   width: 80%;
-  font-size: 2rem;
-  background-color: rgb(91, 233, 186);
+  align-items: center;
+  background-color: rgb(241, 213, 213);
   border-radius: 2rem;
   padding: 2%;
   margin-top: 0.5%;
   margin: 0 auto;
+}
+.dothis {
+  font-size: 2rem;
+  width: 80%;
+}
+.btnCont {
+  width: 20%;
+}
+.check {
+  background-image: url(../image/check.png);
+  background-size: cover;
+  margin: 0 auto;
+  margin-right: 5%;
+}
+.delete {
+  background-image: url(../image/trash-bin.png);
+  background-size: cover;
+  margin: 0 auto;
+  margin-right: 5%;
+}
+.edit {
+  background-image: url(../image/pencil.png);
+  background-size: cover;
+  margin: 0 auto;
+  margin-right: 5%;
 }
