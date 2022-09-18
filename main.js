@@ -10,7 +10,10 @@ function Write() {
   Todo.forEach((e) => {
     DOMSelectors.list.insertAdjacentHTML(
       "beforeend",
-      `<p class="dothis">${e}</p>`
+      `<div>
+        <p class="dothis">${e}</p>
+        <button>&#xf00d;</button>
+      </div>`
     );
   });
 }
@@ -20,9 +23,10 @@ function getinput() {
     if (display !== "") {
       DOMSelectors.errmsg.className = "errmsghide";
       Todo.push(display);
-
       DOMSelectors.input.value = null;
-
+      DOMSelectors.list.childNodes.forEach((e) => {
+        e.remove();
+      });
       Write();
     }
     if (display === "") {
