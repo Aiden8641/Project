@@ -82,6 +82,11 @@
   font-size: 2rem;
   width: 80%;
 }
+.dothiscomplete {
+  font-size: 2rem;
+  width: 80%;
+  text-decoration: line-through;
+}
 .btnCont {
   width: 20%;
 }

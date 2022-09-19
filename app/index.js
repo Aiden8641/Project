@@ -21,6 +21,7 @@ function Write() {
         
       </div>`
     );
+    console.log(e);
   });
 }
 function getrid() {
@@ -29,7 +30,29 @@ function getrid() {
     node.addEventListener("click", function (e) {
       e.target.parentElement.parentElement.remove();
       Todo.splice(e.id);
-      console.log("hello");
+      console.log("deleted");
+    });
+  });
+}
+function check() {
+  let complete = document.querySelectorAll(`.check`);
+  complete.forEach((node) => {
+    node.addEventListener("click", function (e) {
+      e.target.parentElement.parentElement.children[0].className =
+        "dothiscomplete";
+      setTimeout(() => e.target.parentElement.parentElement.remove(), 1000);
+      Todo.splice(e.id);
+      console.log("completed");
+    });
+  });
+}
+function edit() {
+  let edit = document.querySelectorAll(`.edit`);
+  edit.forEach((node) => {
+    node.addEventListener("click", function (e) {
+      let parent = e.target.parentElement.parentElement.firstChild;
+      parent.firstChild.replace(`div`);
+      console.log("edited");
     });
   });
 }
@@ -40,18 +63,19 @@ function getinput() {
       DOMSelectors.errmsg.className = "errmsghide";
       Todo.push(display);
       DOMSelectors.input.value = null;
-      /* DOMSelectors.list.childNodes.forEach((e) => {
-        e.remove();
-      }); */
-      DOMSelectors.list.innerHTML = "";
+      while (DOMSelectors.list.firstChild) {
+        DOMSelectors.list.removeChild(DOMSelectors.list.lastChild);
+      }
+      console.log(Todo);
       Write();
       getrid();
+      check();
+      edit();
     }
     if (display === "") {
       DOMSelectors.errmsg.className = "errmsg";
     }
   });
 }
-function check() {}
 
 getinput();
