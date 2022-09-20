@@ -16,7 +16,6 @@
   max-width: 80vw;
   height: 100%;
   background-size: cover;
-  background-color: rgb(220, 229, 235);
 }
 .head {
   height: 50%;
@@ -73,7 +72,7 @@
   width: 80%;
   align-items: center;
   background-color: rgb(241, 213, 213);
-  border-radius: 2rem;
+  border-radius: 2em;
   padding: 2%;
   margin-top: 0.5%;
   margin: 0 auto;
@@ -89,6 +88,7 @@
 }
 .btnCont {
   width: 20%;
+  text-align: center;
 }
 .check {
   background-image: url(../image/check.png);
@@ -98,12 +98,6 @@
 }
 .delete {
   background-image: url(../image/trash-bin.png);
-  background-size: cover;
-  margin: 0 auto;
-  margin-right: 5%;
-}
-.edit {
-  background-image: url(../image/pencil.png);
   background-size: cover;
   margin: 0 auto;
   margin-right: 5%;

@@ -15,7 +15,6 @@ function Write() {
         <div class="btnCont">
           <button id="${e}" class="check"></button>
           <button id="${e}" class="delete"></button>
-          <button id="${e}" class="edit"></button>
         </div>
 
         
@@ -46,16 +45,7 @@ function check() {
     });
   });
 }
-function edit() {
-  let edit = document.querySelectorAll(`.edit`);
-  edit.forEach((node) => {
-    node.addEventListener("click", function (e) {
-      let parent = e.target.parentElement.parentElement.firstChild;
-      parent.firstChild.replace(`div`);
-      console.log("edited");
-    });
-  });
-}
+
 function getinput() {
   DOMSelectors.button.addEventListener("click", function () {
     let display = DOMSelectors.input.value;
@@ -70,7 +60,6 @@ function getinput() {
       Write();
       getrid();
       check();
-      edit();
     }
     if (display === "") {
       DOMSelectors.errmsg.className = "errmsg";
