@@ -2,11 +2,11 @@ const DOMSelectors = {
   button: document.getElementById("btn"),
   input: document.getElementById("text"),
   errmsg: document.getElementById("erCont"),
-  list: document.querySelector(`.todoCont`),
+  list: document.querySelector(`.newCont`),
 };
-let Todo = [];
+const Todo = [];
 
-function Write() {
+/* function Write() {
   Todo.forEach((e) => {
     DOMSelectors.list.insertAdjacentHTML(
       "beforeend",
@@ -15,9 +15,7 @@ function Write() {
         <div class="btnCont">
           <button id="${e}" class="check"></button>
           <button id="${e}" class="delete"></button>
-        </div>
-
-        
+        </div>        
       </div>`
     );
     console.log(e);
@@ -68,3 +66,43 @@ function getinput() {
 }
 
 getinput();
+ */
+function add() {}
+function createList(input, list) {
+  let update = false;
+  console.log(input);
+  console.log(list);
+  DOMSelectors.button.addEventListener("click", function () {
+    if (DOMSelectors.input.value !== "") {
+      let array = list;
+      let add = input;
+      Todo.push(`${add}: {text: ${add}, status: "new"} `);
+
+      update = true;
+      if (update === true) {
+        console.log("working");
+        console.log(DOMSelectors.list.firstChild);
+        if (DOMSelectors.list.firstChild === null) {
+          console.log("2.-");
+          array.forEach(
+            (e) =>
+              function () {
+                if (e.status === "new") {
+                  console.log(e);
+                  console.log(Todo);
+                } else if (e.status === "In Progress") {
+                  console.log(e);
+                } else if (e.status === "Completed") {
+                  console.log(e);
+                }
+                update = false;
+              }
+          );
+        }
+      }
+    } /* (DOMSelectors.input.value === null)  */ else {
+      DOMSelectors.errmsg.className = "errmsg";
+    }
+  });
+}
+createList(DOMSelectors.input.value, Todo);

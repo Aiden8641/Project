@@ -5,7 +5,7 @@
   flex-flow: column nowrap;
   align-items: center;
   margin: 0 auto;
-  background-color: rgb(160, 221, 160);
+
   border-radius: 2rem;
 }
 #list {
@@ -71,7 +71,7 @@
   flex-flow: row nowrap;
   width: 80%;
   align-items: center;
-  background-color: rgb(241, 213, 213);
+
   border-radius: 2em;
   padding: 2%;
   margin-top: 0.5%;
