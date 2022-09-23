@@ -55,31 +55,40 @@
   font-size: 0;
 }
 
-.todoCont {
-  height: 80vh;
-}
-
-.todoCont {
-  width: auto;
-  display: flex;
-  justify-content: flex-start;
-  flex-flow: column nowrap;
-}
-
-.docont {
+.takholder {
   display: flex;
   flex-flow: row nowrap;
-  width: 80%;
-  align-items: center;
-
-  border-radius: 2em;
-  padding: 2%;
-  margin-top: 0.5%;
+  width: 100%;
   margin: 0 auto;
+  justify-content: center;
+}
+.new {
+  width: 33%;
+}
+.progress {
+  width: 33%;
+}
+.complete {
+  width: 33%;
+}
+.newCont {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.docont {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  background-color: rgb(250, 235, 215);
+  padding: 1%;
+  border-radius: 2rem;
 }
 .dothis {
   font-size: 2rem;
-  width: 80%;
+  width: 70%;
+  display: flex;
+  align-items: center;
 }
 .dothiscomplete {
   font-size: 2rem;
@@ -87,7 +96,7 @@
   text-decoration: line-through;
 }
 .btnCont {
-  width: 20%;
+  width: 30%;
   text-align: center;
 }
 .check {

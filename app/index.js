@@ -73,9 +73,21 @@ function add() {
   DOMSelectors.button.addEventListener("click", function () {
     let input = DOMSelectors.input.value;
     createList(input, Todo);
+    changeStatus();
   });
 }
-
+function changeStatus() {
+  let complete = document.querySelectorAll(`.check`);
+  complete.forEach((node) => {
+    node.addEventListener("click", function (e) {
+      if (e.status === "new") {
+        e.status = "In progress";
+      }
+      console.log("status changed");
+    });
+  });
+}
+function remove() {}
 function createList(input, list) {
   let update = false;
   if (DOMSelectors.input.value !== "") {
