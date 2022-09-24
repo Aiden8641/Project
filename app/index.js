@@ -48,7 +48,7 @@ function changeStatus() {
     });
   });
 }
-const one = 1;
+
 let Todo = [];
 function createList(input, list) {
   let update = false;
