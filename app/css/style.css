@@ -73,6 +73,7 @@
 }
 .newCont {
   display: flex;
+  flex-flow: column nowrap;
   width: 100%;
   justify-content: center;
 }
